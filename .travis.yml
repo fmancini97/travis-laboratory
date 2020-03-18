@@ -1,3 +1,4 @@
+dist: trusty
 language: java
 jdk:
 - openjdk8
@@ -5,7 +6,7 @@ addons:
         sonarcloud:
                 organization: "francesco1997"
                 token:
-                       secure: "r3OoEmEzZPxSSfqriSSLaP3kyZUMW0hR02esE92h7hT7kM0GB1OILkSRBUllcmNUj28EqAtO+Wg/1lDCZOuinZ72SlsTjzTwr8FJNj13l0Svr2bTH3YkW+QmY2hl78nxVVLSUu40zeRSFx9en8hWHkdMzlL2TpVfKEgcuFEBdh+Dpdfw1q065D2OjFXtk71GB5DYMEDMqb/6YjIqSf/88MxUCy8sZhLJBau7DToUTnUzu+YkFbRwzChzPli8wd6aI05loMThwXkwylQb1a7opIGxvlmX+9NMqLmp/32vfYEl14lDNIEApbOaz3PLIOXTvqQ/5E3ek8hUWuXcXZ0hhA0HcaL0ki0cMhpVWkihnk43sJIDo5MDIgJnkZVmBCpKo2Hzpg7pdkBDVnOaHhfg3ZZg31JoHov9FF91uqZtGhXXDX6J9T2CwmQmkD3r6d0nSKHDofgoG2PjKj7/gnOOkvB34MDOtubzkaWzitFjZxByshV6hq1F6Xb1JhAW6kn4iq4uLP51FiFP/pVXVXUIYYp8aUBdc8fCiTxqu3dwQoqlhPRks4IQbTpE6y+Za5R3l6KwOhLb22WEqBsEwb3dZ2zCfVwJAhhJFCwFtfAZpEXhotGuL5O3qPK9NI2soDWIeAcyOplQ8I74doUTc/bsKsZKs9A3wY33SaB3UWDzNSI=" 
+                        secure: "EJMKE64z8uYEFlzeAlA/8DEkQxdSfy//Y23FwTO5rg2+EfIy04v7/+phCtDXxguBTTJHgALvOwvIpG0VZOOa/Yyw3j8S/MgR/5FMD5Y2uuAWC03l+NzWKJtYKT+zGDhlPIOfeX4U3E7CKEulACD8Lsy4p4E+Ccn8Qs10H5jVYkXwW+VG+xaf0g7HPQQOAzFKcrcBv9mq86pESwJY1VGB43TmU2B4irAd3aKFGib2DCpdyuvlJCRMA0jOL4dZw7iNJdTUfNga+ULSRJqcM7f8HmO6pWFsBEZ0UobYAZ+0o5At3Sg7Ah+8FsVbtS3oGeujvjaYwsQFtRyRBDAHUzFeKotf2xkWUPRh2f6mXOVDqyHEx6dmjyoO6KSR21sqeVlnB6h2BhiZAhOfKjFT3cK+SXbHnGc4R67odsXhWkLXOEMc1/1OLICB2vtEZFiglNplHf+H3G4a9Q5mS8FyGi6ZmIuVSV8WAgtquypLFJIp9ACsbPKw35YsH2c3oVrJnCehtPLA5lEijnI89djduAYTNd1dtwtwkZSgVJK6H6N9amvOR0pf1bo7U2jXRKlWfFRusYsz8HR/upO/4yDZkFg97/WUyWk6JcYS7+bXHheSwgHd6JxstBBTtTxS20wUc9Kq+keDznyXPNBO/vfInyo4e9JsXhpKNRjVGY04CknL4es="
 script: 
         - ant build
         - sonar-scanner
