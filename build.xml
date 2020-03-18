@@ -5,7 +5,7 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="travis-laboratory">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../../../../opt/eclipse/"/>
+    <property name="ECLIPSE_HOME" value="../../../../opt/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
@@ -15,7 +15,7 @@
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
-            <fileset dir=".">
+            <fileset dir="src">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -29,7 +29,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="."/>
+            <src path="src"/>
             <classpath refid="travis-laboratory.classpath"/>
         </javac>
     </target>
@@ -46,5 +46,10 @@
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
+    </target>
+    <target name="HelloWorld">
+        <java classname="it.uniroma2.ing.isw2.travisLaboratory.HelloWorld" failonerror="true" fork="yes">
+            <classpath refid="travis-laboratory.classpath"/>
+        </java>
     </target>
 </project>
