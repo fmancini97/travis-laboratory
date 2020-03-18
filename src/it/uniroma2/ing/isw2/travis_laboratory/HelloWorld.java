@@ -1,7 +1,7 @@
 /**
  * 
  */
-package it.uniroma2.ing.isw2.travisLaboratory;
+package it.uniroma2.ing.isw2.travis_laboratory;
 
 /**
  * @author fmancini
